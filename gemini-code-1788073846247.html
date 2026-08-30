@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUT Republik Indonesia ke-81</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">RI <span>#81</span></div>
+        <nav>
+            <a href="#hero">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#kegiatan">Kegiatan</a>
+            <a href="#ucapan">Harapan</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <span class="badge">17 Agustus 2026</span>
+            <h1>Dirgahayu Republik Indonesia <span>ke-81</span></h1>
+            <p>Nusantara Baru, Indonesia Maju. Mari bersama menjaga persatuan dan terus berkarya untuk bangsa.</p>
+            <a href="#tentang" class="btn">Jelajahi Momen</a>
+        </div>
+        <div class="hero-flag">
+            <div class="flag"></div>
+        </div>
+    </section>
+
+    <section id="tentang" class="section">
+        <h2>Semangat 81 Tahun Kemerdekaan</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="icon">🏛️</div>
+                <h3>Persatuan Bangsa</h3>
+                <p>Mempererat tali silaturahmi antar suku, agama, dan budaya di seluruh pelosok Nusantara.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Inovasi Digital</h3>
+                <p>Mendorong generasi muda untuk terus berinovasi memanfaatkan teknologi demi kemajuan negara.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🌴</div>
+                <h3>Keberlanjutan</h3>
+                <p>Menjaga kekayaan alam dan lingkungan hidup Indonesia untuk generasi masa depan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kegiatan" class="section alt-bg">
+        <h2>Rangkaian Acara Peringatan</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time">07:00 WIB</div>
+                <div class="detail">
+                    <h3>Upacara Bendera Khidmat</h3>
+                    <p>Pengibaran Sang Saka Merah Putih di Istana Negara dan serentak di seluruh Indonesia.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">10:00 WIB</div>
+                <div class="detail">
+                    <h3>Detik-Detik Proklamasi</h3>
+                    <p>Mengenang kembali momen bersejarah pembacaan teks proklamasi kemerdekaan.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time">13:00 WIB</div>
+                <div class="detail">
+                    <h3>Pesta Rakyat & Lomba</h3>
+                    <p>Berbagai perlombaan tradisional interaktif warga di setiap daerah.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ucapan" class="section">
+        <h2>Kirim Doa & Harapan</h2>
+        <div class="interactive-box">
+            <input type="text" id="userInput" placeholder="Tuliskan doa untuk Indonesia..." maxlength="100">
+            <button onclick="tambahHarapan()">Kirim</button>
+        </div>
+        <div class="harapan-list" id="harapanList">
+            <div class="chip">🇮🇩 Merdeka! Semoga Indonesia semakin maju!</div>
+            <div class="chip">✨ Jaya selalu negeriku tercinta!</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Peringatan HUT RI ke-81. Bangga Buatan Indonesia.</p>
+    </footer>
+
+    <script>
+        function tambahHarapan() {
+            const input = document.getElementById('userInput');
+            const list = document.getElementById('harapanList');
+            
+            if (input.value.trim() !== "") {
+                const newChip = document.createElement('div');
+                newChip.className = 'chip animation-pop';
+                newChip.textContent = '🇮🇩 ' + input.value;
+                list.prepend(newChip);
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
